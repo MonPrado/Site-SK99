@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 :root {
-    --cor-primaria: #d1232a;
+    --cor-primaria: #770250;
     --fonte-principal:'Montserrat', sans-serif;
     --fonte-secundaria:'Satisfy', sans-serif;
 }
@@ -39,12 +39,12 @@ header {
   }
   
   .tabela_principal th, .tabela_principal td {
-    border: 1px solid #0f0f0f;
+    border: 1px solid #000000;
     padding: 8px;
     text-align: left;
   }
   
   .tabela_principal th {
     background-color: var(--cor-primaria);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
