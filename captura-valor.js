@@ -32,14 +32,13 @@ for (var count = 0; count < clientes.length; count++) {
             clientes[count].querySelector(".info-valor-total").textContent = formaValorMonetario(calculoTotal(qtde, unitario));
         }
     }
+}
 
-    function calculoTotal(qtde, unitario) {
-        var total = 0;
-        total = qtde * unitario;
+function calculoTotal(qtde, unitario) {
+    var total = 0;
+    total = qtde * unitario;
 
-        return total;
-    }
-
+    return total;
 }
 
 //Função para calcular o valor total de encomendas 
@@ -47,4 +46,5 @@ function formaValorMonetario(valor) {
     var formReal = 0;
     formReal = valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     return formReal;
-} 
+}
+
