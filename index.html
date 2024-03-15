@@ -16,50 +16,74 @@
     </header>
     <section>
         <h1 class="titulo_secao">Encomendas</h1>
-        <hr style="width: 90%; margin-bottom: 2%;">
+        <hr style="width: 80%; margin-bottom: 2%;">
     </section>
-    <table class="tabela_principal">
-        <thead>
-            <tr>
-                <th>NOME</th>
-                <th>PRODUTO</th>
-                <th>QUANTIDADE</th>
-                <th>VALOR UNITÁRIO</th>
-                <th>TOTAL</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="linhas">
-                <td>Mariana</td>
-                <td class="info-nome">Board Element</td>
-                <td class="info-qtde">-</td>
-                <td class="info-valor">300</td>
-                <td class="info-valor-total"></td>
-            </tr>
-            <tr class="linhas">
-                <td>Richard</td>
-                <td class="info-nome">Truck BlackSheep</td>
-                <td class="info-qtde">2</td>
-                <td class="info-valor">60</td>
-                <td class="info-valor-total"></td>
-            </tr>
-            <tr class="linhas">
-                <td>Ramon</td>
-                <td class="info-nome">Rodinha SpitFire</td>
-                <td class="info-qtde">4</td>
-                <td class="info-valor">-</td>
-                <td class="info-valor-total"></td>
-            </tr>
-            <tr class="linhas">
-                <td>Geovana</td>
-                <td class="info-nome">Rolamento</td>
-                <td class="info-qtde">4</td>
-                <td class="info-valor">79.99</td>
-                <td class="info-valor-total"></td>
-            </tr>
-        </tbody>
-    </table>
+    <section>
+        <table class="tabela_principal">
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>PRODUTO</th>
+                    <th>QUANTIDADE</th>
+                    <th>VALOR UNITÁRIO</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="linhas">
+                    <td>Mariana</td>
+                    <td class="info-nome">Board Element</td>
+                    <td class="info-qtde">-</td>
+                    <td class="info-valor">300</td>
+                    <td class="info-valor-total"></td>
+                </tr>
+                <tr class="linhas">
+                    <td>Richard</td>
+                    <td class="info-nome">Truck BlackSheep</td>
+                    <td class="info-qtde">2</td>
+                    <td class="info-valor">60</td>
+                    <td class="info-valor-total"></td>
+                </tr>
+                <tr class="linhas">
+                    <td>Ramon</td>
+                    <td class="info-nome">Rodinha SpitFire</td>
+                    <td class="info-qtde">4</td>
+                    <td class="info-valor">-</td>
+                    <td class="info-valor-total"></td>
+                </tr>
+                <tr class="linhas">
+                    <td>Geovana</td>
+                    <td class="info-nome">Rolamento</td>
+                    <td class="info-qtde">4</td>
+                    <td class="info-valor">79.99</td>
+                    <td class="info-valor-total"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h1 class="titulo_secao">Adicionar Nova Encomendas</h1>
+        <hr style="width: 80%; margin-bottom: 2%;"> 
+        <form class="formulario" id="produtoForm">
+            <label for="nome">Nome:</label><br>
+            <input placeholder="Nome:" type="text" id="nome" name="nome"><br>
+            <label for="quantidade">Quantidade:</label><br>
+            <input placeholder="Quantidade:" type="number" id="quantidade" name="quantidade"><br>
+            <label for="produto">Produto:</label><br>
+            <select name="" id="">
+                <option value="" disabled selected hidden>Selecione:</option>
+                <option value="">Board Element</option>
+                <option value="">Truck BlackSheep</option>
+                <option value="">Rodinha SpitFire</option>
+                <option value="">Rolamento</option>
+            </select>
+            <label for="preco">R$ Unitario:</label><br>
+            <input placeholder="Preço:" type="text" id="preco" name="preco"><br><br>
+            <button id="botao" type="submit" value="Adicionar Produto">Adicionar</button>
+        </form>
+    </section>
     <script src="captura-valor.js"></script>
 </body>
+
 
 </html>

@@ -35,6 +35,7 @@ for (var count = 0; count < clientes.length; count++) {
 }
 
 function calculoTotal(qtde, unitario) {
+    
     var total = 0;
     total = qtde * unitario;
 
@@ -48,3 +49,9 @@ function formaValorMonetario(valor) {
     return formReal;
 }
 
+var botaoAdicionar = document.querySelector("#botao");
+
+botaoAdicionar.addEventListener("click", function(event){
+    event.preventDefault();
+    console.log("Agora sim, o botão foi clicado!");
+})
