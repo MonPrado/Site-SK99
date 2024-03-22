@@ -8,10 +8,21 @@ document.getElementById("produtoForm").addEventListener("submit", function(event
     var produto = document.getElementById("produto").value;
     var valor = parseFloat(document.getElementById("valor").value);
 
-    // Verifica se todos os campos estão preenchidos
-    if (!nome || isNaN(quantidade) || quantidade <= 0 || !produto || isNaN(valor) || valor <= 0) {
-        alert("Você não preencheu todos os campos, presta atenção!");
-        return; // Encerra a execução da função se algum campo estiver vazio ou inválido
+    // Verificação da validade da quantidade e do valor
+    if (quantidade <= 0 || isNaN(quantidade)) { // Modificado <= 0
+        alert("Quantidade inválida.");
+        return;
+    }
+    
+    if (valor <= 0 || isNaN(valor)) { // Modificado <= 0
+        alert("Valor inválido.");
+        return;
+    }
+
+    // Verificação se todos os campos estão preenchidos
+    if (!nome || !produto) {
+        alert("Por favor, preencha todos os campos.");
+        return; // Para a execução da função se algum campo estiver vazio
     }
 
     // Criação de uma nova linha na tabela
@@ -31,8 +42,23 @@ document.getElementById("produtoForm").addEventListener("submit", function(event
     cellQuantidade.textContent = quantidade;
     cellValorUnitario.textContent = formatarValorMonetario(valor);
 
-    // Quantidade e valor válidos, calcula o valor total e formata
-    cellValorTotal.textContent = formatarValorMonetario(calculoTotal(quantidade, valor));
+    // Verificação da validade da quantidade e do valor
+    if (quantidade <= 0 || isNaN(quantidade)) { // Modificado <= 0
+        cellQuantidade.textContent = "Quantidade Inválida";
+        cellQuantidade.style.color = "red";
+        cellValorTotal.textContent = ""; // Limpa o valor total
+    } else if (valor <= 0 || isNaN(valor)) { // Modificado <= 0
+        cellValorUnitario.textContent = "Valor Inválido";
+        newRow.style.backgroundColor = "red";
+        cellNome.style.color = "white";
+        cellProduto.style.color = "white";
+        cellQuantidade.style.color = "white";
+        cellValorUnitario.style.color = "white";
+        cellValorTotal.textContent = ""; // Limpa o valor total
+    } else {
+        // Quantidade e valor válidos, calcula o valor total e formata
+        cellValorTotal.textContent = formatarValorMonetario(calculoTotal(quantidade, valor));
+    }
 
     // Limpa os campos do formulário
     document.getElementById("nome").value = "";
