@@ -1,89 +1,157 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+/*VARIAVEIS*/
 
 :root {
-    --cor-primaria: #770250;
+    --cor-primaria: #1157AF;
     --fonte-principal:'Montserrat', sans-serif;
-    --fonte-secundaria:'Satisfy', sans-serif;
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
 }
 
+/*ESTILIZAÇÃO DO HEADER*/
+
 header {
-    background-color: var(--cor-primaria);
-    width: 100%;
+  background-color: var(--cor-primaria);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
 }
 
 .logo_header {
-    width: 10%;
-    display: flex;
-    align-items: center;
+  width: 50px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.titulo_secao{
-    font-family: var(--fonte-secundaria);
-    font-size: 26px;
+.loja_texto {
+  font-family: var(--fonte-principal);
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.titulo_secao {
+    font-family: var(--fonte-principal);
     font-weight: bold;
+    font-size: 22px;
     text-transform: uppercase;
     width: 80%;
-    padding: 0.5% 5%;
-    margin-left: 5%;
+    margin-left: 10%;
+    display: flex;
 }
-     
-.tabela_principal {
+
+
+/*ESTILIZAÇÃO DA TABELA*/
+
+.tabela {
     width: 80%;
     border-collapse: collapse;
     margin-top: 20px;
     font-family: var(--fonte-principal);
     margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 16px;
   }
   
-  .tabela_principal th, .tabela_principal td {
-    border: 1px solid #000000;
+  .tabela th, .tabela td {
+    border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
   }
   
-  .tabela_principal th {
+  .tabela th {
     background-color: var(--cor-primaria);
-    color: rgb(255, 255, 255);
+    color: white;
   }
 
-.formulario {
-
-    width: 80%;
-    display: flex;
-    margin: 0 auto;
-    text-align: left;
-    flex-direction: column;
-}
-
-.formulario label{
-    font-size: 15px;
+  .info_nome {
     text-transform: uppercase;
+    font-weight: 700;
+  }
+
+
+  /*ESTILIZAÇÃO DO FORMULÁRIO*/
+
+  .form_adicionar_encomenda {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
+  .form_adicionar_encomenda h2 {
     font-family: var(--fonte-principal);
-}
-
-.formulario input{
-    width: 30%;
-}
-
-.formulario select{
-    width: 30%;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    display: flex;
+    text-align: left;
     margin-bottom: 15px;
-}
+    margin-top: 5px;
+  }
 
+  .form_adicionar_encomenda label {
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    margin-bottom: 10;
+    text-transform: uppercase;
+    justify-content: left;
+    margin-top: 6px;
+    font-size: 16px;
+  }
 
-.formulario button{
-    width: 10%;
-    padding: 10px;
-    margin-bottom: 10px;
+  .form_adicionar_encomenda input {
+    width: 20%;
+    padding: 4px;
+    min-width: 315px;
+  }
+
+  .form_adicionar_encomenda select {
+    padding: 4px;
+    width: 327px;
+  }
+
+  .form_adicionar_encomenda button {
+    margin-top: 20px;
+    width: 12%;
+    padding: 20px;
     color: white;
     background-color: var(--cor-primaria);
     border-style: none;
-    font-size: 16px;
+    text-transform: uppercase;
+    min-width: 100px;
+    justify-content: left;
+    font-size: 12px;
     font-family: var(--fonte-principal);
-}
+    text-align: center;
+  }
+
+  /*ESTILIZAÇÃO DO RODAPÉ*/
+
+  .rodape {
+    background-color: var(--cor-primaria);
+    color: white;
+    height: 40px;
+    padding: 20px;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    margin-top: 20px;
+  }
