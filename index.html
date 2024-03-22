@@ -6,25 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="assets/iconeTEF.ico" type="image/x-icon">
-    <title>LOJA - T&F</title>
+    <link rel="shortcut icon" href="assets/Caveira99.ico" type="image/x-icon">
+    <title>SK99</title>
 </head>
 
 <body>
-    <!--Inicio do header-->
     <header>
-        <div class="logo_container">
-            <img src="assets/logoTEF.png" class="logo_header" alt="Logo do CS2">
-            <div>
-                <p class="loja_texto">LOJA OFICIAL DO TEF</p>
-            </div>
-        </div>
+        <img src="assets/SK99.png" class="logo_header" alt="Spitfire-">
     </header>
-    <!--Fim do header-->
-    <!--Inicio da primeira seção-->
     <section>
-        <h2 class="titulo_secao">Produtos encomendados</h2>
-        <table class="tabela">
+        <h1 class="titulo_secao">Encomendas</h1>
+        <hr style="width: 20%; margin-bottom: 2%;">
+    </section>
+    <section>
+        <table class="tabela_principal">
             <thead>
                 <tr>
                     <th>NOME</th>
@@ -34,71 +29,62 @@
                     <th>TOTAL</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr class="linhas">
-                    <td class="info_nome">Crishna</td>
-                    <td class="info_produto">Calça TEF - Edição Nike</td>
-                    <td class="info_qtde">5</td>
-                    <td class="info_valor">219,90</td>
-                    <td class="info_total">-</td>
-                </tr>
-                <tr class="linhas">
-                    <td class="info_nome">Luyra</td>
-                    <td class="info_produto">Blusa TEF - Edição Vintage</td>
-                    <td class="info_qtde">2</td>
-                    <td class="info_valor">-</td>
-                    <td class="info_total"></td>
-                </tr>
-                <tr class="linhas">
-                    <td class="info_nome">Bozer</td>
-                    <td class="info_produto">Boné TEF - Edição NFL</td>
-                    <td class="info_qtde">-</td>
-                    <td class="info_valor">149,90</td>
-                    <td class="info_total"></td>
-                </tr>
-                <tr class="linhas">
-                    <td class="info_nome">Beto</td>
-                    <td class="info_produto">Tenis TEF - Edição Air Jordan</td>
-                    <td class="info_qtde">3</td>
-                    <td class="info_valor">999,90</td>
-                    <td class="info_total"></td>
-                </tr>
-            </tbody>
+                <tbody>
+                    <tr class="linhas">
+                        <td class="info-nome">Mariana</td>
+                        <td class="info-produto">Board Element</td>
+                        <td class="info-qtde">-</td>
+                        <td class="info-valor">300</td>
+                        <td class="info-valor-total"></td>
+                    </tr>
+                    <tr class="linhas">
+                        <td class="info-nome">Richard</td>
+                        <td class="info-produto">Truck BlackSheep</td>
+                        <td class="info-qtde">2</td>
+                        <td class="info-valor">60</td>
+                        <td class="info-valor-total"></td>
+                    </tr>
+                    <tr class="linhas">
+                        <td class="info-nome">Ramon</td>
+                        <td class="info-produto">Rodinha SpitFire</td>
+                        <td class="info-qtde">4</td>
+                        <td class="info-valor">-</td>
+                        <td class="info-valor-total"></td>
+                    </tr>
+                    <tr class="linhas">
+                        <td class="info-nome">Geovana</td>
+                        <td class="info-produto">Rolamento</td>
+                        <td class="info-qtde">4</td>
+                        <td class="info-valor">79.99</td>
+                        <td class="info-valor-total"></td>
+                    </tr>
+                </tbody>
         </table>
     </section>
-    <!--Fim da primeira seção-->
-    <!--Inicio da segunda seção-->
     <section>
-        <form class="form_adicionar_encomenda" id="formAdicionarEncomenda">
-            <hr style="width: 100%; min-width: 490px; justify-content: left; margin-top: -5px;">
-            <h2>ADICIONAR ENCOMENDA</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <label for="produto">Produto:</label>
-            <select class="selecao_produto" name="produto" id="produto">
+        <h1 class="titulo_secao">Adicionar Nova Encomendas</h1>
+        <hr style="width: 20%; margin-bottom: 2%;"> 
+        <form class="formulario" id="produtoForm">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="quantidade">Quantidade:</label><br>
+            <input type="number" id="quantidade" name="quantidade"><br>
+            <label for="produto">Produto:</label><br>
+            <select name="produto" id="produto">
                 <option value="" disabled selected hidden></option>
-                <option value="">Calça TEF - Edição Nike</option>
-                <option value="">Blusa TEF - Edição Vintage</option>
-                <option value="">Boné TEF - Edição NFL</option>
-                <option value="">Tenis TEF - Edição Air Jordan</option>
-                <option value="">Relógio TEF - Edição Rolex</option>
-                <option value="">Polo TEF - Edição Calvin Klein</option>
-            </select>
-            <label for="quantidade">Quantidade:</label>
-            <input type="number" id="quantidade" name="quantidade" required>
-            <label for="valor">Valor Unitário:</label>
-            <input type="text" id="valor" name="valor" required>
-            <button id="adicionar-encomenda" type="submit">Adicionar</button>
+                <option value="Board Element">Board Element</option>
+                <option value="Truck BlackSheep">Truck BlackSheep</option>
+                <option value="Rodinha SpitFire">Rodinha SpitFire</option>
+                <option value="Rolamento">Rolamento</option>
+            </select>            
+            <label for="valor">R$ Unitario:</label><br>
+            <input type="text" id="valor" name="valor"><br><br>
+            <button id="botao" type="submit" value="Adicionar Produto">Adicionar</button>
         </form>
     </section>
-    <!--Fim da segunda seção-->
-    <!--Inicio do rodapé-->
-    <footer class="rodape">
-        <p>DESENVOLVIDO POR IGOR DOS SANTOS ROSA - 2024</p>
-    </footer>
-    <!--Fim do rodapé-->
-    <script src="scripts/tabelaEncomenda.js"></script>
-    <script src="scripts/adicionarEncomenda.js"></script>
+    <script src="scripts/captura-valor.js"></script>
+    <script src="scripts/adicionar-encomenda.js"></script>
 </body>
+
 
 </html>
